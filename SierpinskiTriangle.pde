@@ -11,7 +11,8 @@ void tri(int x, int y, int len) {
   triangle(x, y, x+len/2, y-len, x+len, y);
 } 
 void sierpinski(int x, int y, int len, int pt, int max) { 
-  if (len <= mouseX) {
+int m = mouseX;
+  if (len <= m) {
     tri(x, y, len);
   } else {
     sierpinski(x, y, len/2, pt + 1, max);
