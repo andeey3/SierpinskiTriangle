@@ -5,14 +5,13 @@ public void setup() {
 }
 public void draw() {
   background(0);
-  sierpinski(width/2-len/2, height/2+len/2, len, 1, 1);
+  sierpinski(width/2-len/2, height/2+len/2, len, 1,1);
 }
-void tri(int x, int y, int len) {
+public void tri(int x, int y, int len) {
   triangle(x, y, x+len/2, y-len, x+len, y);
 } 
-void sierpinski(int x, int y, int len, int pt, int max) { 
-int m = mouseX;
-  if (len <= m) {
+public void sierpinski(int x, int y, int len, int pt, int max) {
+  if (len <= mouseX) {
     tri(x, y, len);
   } else {
     sierpinski(x, y, len/2, pt + 1, max);
